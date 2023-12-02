@@ -17,17 +17,6 @@ public class PostServiceImpl implements PostService{
     public PostDto create(PostCreateForm form) {
         var post = PostMapper.map(form);
         var sevedPost = postRepository.save(post);
-        return null;
-    }
-
-    public static PostDto map(Post post){
-        var dto = new PostDto();
-        dto.setId(post.getId());
-        dto.setTitle(post.getTitle());
-        dto.setDescription(post.getDescription());
-        dto.setContent(post.getContent());
-        dto.setCreatedAt(post.getCreatedAt());
-        dto.setUpdatedAt(post.getUpdatedAt());
-        return dto;
+        return PostMapper.map(sevedPost);
     }
 }
