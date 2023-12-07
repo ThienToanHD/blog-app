@@ -1,4 +1,4 @@
-package com.vti.blogapp.service;
+package com.vti.blogapp.form;
 
 import lombok.Getter;
 import lombok.Setter;
